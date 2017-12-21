@@ -6,8 +6,8 @@ MongoClient.connect('mongodb://localhost:27017/TodoApp', (err, db)=>{
     console.log('Unable to connect Server');
   }
   console.log('Connected');
-  db.collection('User').find({name: 'Khai Tran'}).toArray().then((docs)=>{
-    console.log(JSON.stringify(docs, undefined, 2));
+  db.collection('User').find({name: 'Khai Tran'}).toArray().then((results)=>{
+    console.log(JSON.stringify(results, undefined, 2));
   }, (err)=>{
       console.log('Unable to fetch data');
   });
