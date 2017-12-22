@@ -6,11 +6,11 @@ var {mongoose} = require('./db/mongoose');
 var {Todo} = require('./models/todo');
 var {User} = require('./models/user');
 
-var port = process.env.PORT || 3000;
+var port = process.env.PORT || 3030;
 
 var app = express();
 
-app.use(bodyParser.json());
+// app.use(bodyParser.json());
 
 app.post('/todos', (req, res)=>{
   var newTodo = new Todo({
